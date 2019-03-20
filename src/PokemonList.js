@@ -5,13 +5,8 @@ import {
   withStyles,
   List,
   ListItem,
-  ListItemSecondaryAction,
   ListItemText,
-  IconButton,
-  Grid,
-  TextField,
   Button,
-  FormControl
 } from "@material-ui/core";
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
@@ -69,10 +64,14 @@ class PokemonList extends Component {
           primary={item.name}
           secondary={
             <React.Fragment>
+              Type:
               <Typography component="span" color="textPrimary">
-                {item.type}
+                {item.type1}
               </Typography>
-              {item.catchRate}
+              <Typography component="span" color="textPrimary">
+                {item.type2}
+              </Typography>
+              Catch rate: {item.catchRate}
             </React.Fragment>
           }
         />
